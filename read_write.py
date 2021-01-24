@@ -1,20 +1,18 @@
-#-------------------------Reading & Writing data in Files----------------------
 # Reading CSV Files with Pandas:
-import pandas
-df = pandas.read_csv('/home/deepak/analytics/Mall_Customers.csv')
+import pandas as pd
+
+df = pd.read_csv('/home/deepak/code/Mall_Customers.csv')
 print(df)
+print()
 
-# Writing CSV Files with Pandas:
-import pandas
-df.to_csv('/home/deepak/analytics/Mall_Customers(1).csv')
+# Writing
+df.to_csv('/home/deepak/code/Mall_Customers_copy.csv')
 
 
-
-# Reading Excel Files with Pandas
-df = pandas.read_excel('/home/deepak/analytics/Online_Retail_Store.xlsx')
-print(df)
-
-# Writing Excel Files with Pandas 
-df1 = pandas.DataFrame(df)
-print (df1)
-df1.to_excel('Online_Retail_Store(1).xlsx')
+# Reading Excel Files
+df1 = pd.read_excel('/home/deepak/code/Online_Retail_Store.xlsx')
+print(df1)
+# Writing since, it's huge data
+df2 = pd.DataFrame(df1.iloc[:200, :])
+print (df2)
+df2.to_excel('/home/deepak/code/Online_Retail_Store_copy.xlsx')
