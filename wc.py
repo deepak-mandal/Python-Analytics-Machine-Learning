@@ -16,5 +16,5 @@ wc=WordCloud(width=1584, height=396,
              stopwords=stopword,
              min_font_size=10).generate(mytext)
              
-
-wc.to_file('wc.png')
+print(wc.words_.keys())
+#wc.to_file('wc.png')
